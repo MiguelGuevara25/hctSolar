@@ -6,7 +6,7 @@ Proyecto desarrollado con **Astro** y **Tailwind CSS** para la gestión de servi
 
 - [Astro](https://astro.build/) - Framework web para contenido rápido.
 - [Tailwind CSS](https://tailwindcss.com/) - Estilizado basado en utilidades.
-- [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript) - Lógica del lado del cliente.
+- [TypeScript](https://www.typescriptlang.org/) - Lógica del lado del cliente.
 
 ## 📦 Instalación
 
@@ -18,3 +18,23 @@ Proyecto desarrollado con **Astro** y **Tailwind CSS** para la gestión de servi
    ```sh
    npm install
    ```
+3. **Iniciar el servidor de desarrollo:**
+   ```sh
+   npm run dev
+   ```
+
+La aplicación estará disponible en `localhost:4321`.
+
+```text
+/
+├── public/              # Imágenes y recursos estáticos
+├── src/
+|   ├── assets/          # Iconos y gráficos
+│   ├── components/      # Componentes UI
+|   |   ├── sections/
+|   |   └── sections
+│   ├── layouts/         # Plantillas base
+│   ├── pages/           # Rutas del sitio
+│   └── data.js          # Configuración de datos del sitio
+└── package.json         # Dependencias y scripts
+```
