@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-[#EDEDED];
+  }
+}
+
+.bg-btn-header {
+  background-image: url("/background/FondoBotonContactanosHeader.png");
+  background-size: cover;
+  background-position: center;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}

@@ -1,0 +1,31 @@
+---
+import { secciones } from "../data";
+import ArrowUpRight from "../assets/ArrowUpRight.astro";
+---
+
+<header class="sticky top-0 bg-white">
+  <div class="w-90/100 mx-auto flex items-center justify-between py-4">
+    <div class="w-52">
+      <img src="/img/logoHCT.png" alt="Astro logo" />
+    </div>
+
+    <nav>
+      <ul class="flex gap-5 text-[#1C244B] font-medium">
+        {
+          secciones.map((seccion) => (
+            <li>
+              <a href={seccion.slug}>{seccion.nombre}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <button
+      class="bg-btn-header text-white px-4 py-2.5 rounded-full flex items-center gap-10"
+    >
+      <span>Contáctanos</span>
+      <ArrowUpRight />
+    </button>
+  </div>
+</header>
