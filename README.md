@@ -12,5 +12,5 @@ Proyecto desarrollado con **Astro** y **Tailwind CSS** para la gestión de servi
 
 1. Clona el repositorio:
    ```bash
-   git clone [https://github.com/MiguelGuevara25/hctSolar.git](https://github.com/MiguelGuevara25/hctSolar.git)
+   git clone https://github.com/MiguelGuevara25/hctSolar.git
    ```
