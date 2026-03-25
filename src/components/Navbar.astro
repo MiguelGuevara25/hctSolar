@@ -1,15 +1,16 @@
 ---
 import { secciones } from "../data";
 import ArrowUpRight from "../assets/ArrowUpRight.astro";
+import MenuBurger from "../assets/MenuBurger.astro";
 ---
 
-<header class="sticky top-0 bg-white">
+<header class="sticky top-0 bg-white z-50">
   <div class="w-90/100 mx-auto flex items-center justify-between py-4">
     <div class="w-52">
       <img src="/img/logoHCT.png" alt="Astro logo" />
     </div>
 
-    <nav>
+    <nav class="hidden md:block">
       <ul class="flex gap-5 text-[#1C244B] font-medium">
         {
           secciones.map((seccion) => (
@@ -22,10 +23,14 @@ import ArrowUpRight from "../assets/ArrowUpRight.astro";
     </nav>
 
     <button
-      class="bg-btn-header text-white px-4 py-2.5 rounded-full flex items-center gap-10"
+      class="bg-btn-header text-white px-4 py-2.5 rounded-full md:flex items-center gap-10 hidden"
     >
       <span>Contáctanos</span>
       <ArrowUpRight />
     </button>
+
+    <div class="md:hidden">
+      <MenuBurger />
+    </div>
   </div>
 </header>
