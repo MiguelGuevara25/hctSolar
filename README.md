@@ -10,7 +10,11 @@ Proyecto desarrollado con **Astro** y **Tailwind CSS** para la gestión de servi
 
 ## 📦 Instalación
 
-1. Clona el repositorio:
+1. **Clonar el repositorio:**
    ```sh
    git clone https://github.com/MiguelGuevara25/hctSolar.git
+   ```
+2. **Instalar dependencias:**
+   ```sh
+   npm install
    ```
