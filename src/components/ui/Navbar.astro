@@ -1,13 +1,20 @@
 ---
-import { secciones } from "../data";
-import ArrowUpRight from "../assets/ArrowUpRight.astro";
-import MenuBurger from "../assets/MenuBurger.astro";
+import ArrowUpRight from "../../assets/ArrowUpRight.astro";
+import MenuBurger from "../../assets/MenuBurger.astro";
+import { secciones } from "../../data";
+import { Image } from "astro:assets";
+import LogoHCT from "../../../public/img/logoHCT.png";
 ---
 
 <header class="sticky top-0 bg-white z-50">
   <div class="w-90/100 mx-auto flex items-center justify-between py-4">
     <div class="w-52">
-      <img src="/img/logoHCT.png" alt="Astro logo" />
+      <Image
+        src={LogoHCT}
+        alt="HCT logo"
+        format="png"
+        quality="high"
+      />
     </div>
 
     <nav class="hidden md:block">

@@ -12,10 +12,22 @@
   background-position: center;
 }
 
+.bg-btn-form {
+  background-image: url("/background/FondoBotonEnviarContacto.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-form {
+  background-image: url("/background/BordeFondoFormularioContacto.png");
+  background-size: cover;
+  background-position: top center;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
 
 .font-archivo {
-  font-family: "Archivo Variable", sans-serif;  
+  font-family: "Archivo Variable", sans-serif;
 }

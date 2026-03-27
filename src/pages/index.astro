@@ -1,8 +1,9 @@
 ---
-import Navbar from "../components/Navbar.astro";
 import Layout from "../layouts/Layout.astro";
 import IconArrows from "../assets/IconArrows.astro";
-import Footer from "../components/Footer.astro";
+import Navbar from "../components/ui/Navbar.astro";
+import Footer from "../components/sections/Footer.astro";
+import FormContact from "../components/sections/FormContact.astro";
 ---
 
 <Layout>
@@ -33,5 +34,6 @@ import Footer from "../components/Footer.astro";
 
     <div class="h-screen border grid place-items-center">Acá el video</div>
   </section>
+  <FormContact />
   <Footer />
 </Layout>
