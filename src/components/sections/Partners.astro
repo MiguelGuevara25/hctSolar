@@ -1,0 +1,26 @@
+---
+import { partnersLogos } from "../../data";
+---
+
+<section class="w-90/100 mx-auto text-[#1C244B] font-light py-20">
+  <h2 class="font-archivo text-4xl text-center mb-10 md:w-2/5 mx-auto">
+    Componentes de última generación
+    <span class="font-bold border-b-2 border-[#FF7C00]">
+      respaldados por fabricantes globales
+    </span>
+  </h2>
+
+  <div class="grid md:grid-cols-2 grid-cols-1 gap-12">
+    {
+      partnersLogos.map((logo) => (
+        <div class="md:h-16">
+          <img
+            class="h-full object-cover mx-auto"
+            src={logo.src}
+            alt={logo.alt}
+          />
+        </div>
+      ))
+    }
+  </div>
+</section>

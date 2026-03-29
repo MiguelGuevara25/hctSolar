@@ -18,6 +18,12 @@
   background-position: center;
 }
 
+.bg-minimasuciedad-maximageneracion {
+  background-image: url("/background/FondoMinimasuciedadMaximageneracion.webp");
+  background-size: cover;
+  background-position: center;
+}
+
 .bg-form {
   background-image: url("/background/BordeFondoFormularioContacto.png");
   background-size: cover;
