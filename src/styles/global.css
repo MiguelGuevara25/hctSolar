@@ -24,6 +24,12 @@
   background-position: center;
 }
 
+.bg-escalabilidad {
+  background-image: url("/background/FondoEscalabilidad.webp");
+  background-size: cover;
+  background-position: center;
+}
+
 .bg-form {
   background-image: url("/background/BordeFondoFormularioContacto.png");
   background-size: cover;

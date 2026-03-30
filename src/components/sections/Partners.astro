@@ -2,25 +2,27 @@
 import { partnersLogos } from "../../data";
 ---
 
-<section class="w-90/100 mx-auto text-[#1C244B] font-light py-12 md:py-20">
-  <h2 class="font-archivo text-4xl text-center mb-10 md:w-2/5 mx-auto">
-    Componentes de última generación
-    <span class="font-bold border-b-2 border-[#FF7C00]">
-      respaldados por fabricantes globales
-    </span>
-  </h2>
+<section class="bg-white text-[#1C244B] font-light pb-12 pt-14 md:pb-20 md:pt-33">
+  <div class="w-90/100 mx-auto">
+    <h2 class="font-archivo text-4xl text-center mb-10 md:w-2/5 mx-auto">
+      Componentes de última generación
+      <span class="font-bold border-b-2 border-[#FF7C00]">
+        respaldados por fabricantes globales
+      </span>
+    </h2>
 
-  <div class="grid md:grid-cols-2 grid-cols-1 gap-12">
-    {
-      partnersLogos.map((logo) => (
-        <div class="md:h-16 mx-auto w-2/3 md:w-full">
-          <img
-            class="h-full object-cover mx-auto"
-            src={logo.src}
-            alt={logo.alt}
-          />
-        </div>
-      ))
-    }
+    <div class="grid md:grid-cols-2 grid-cols-1 gap-12">
+      {
+        partnersLogos.map((logo) => (
+          <div class="md:h-16 mx-auto w-2/3 md:w-full">
+            <img
+              class="h-full object-cover mx-auto"
+              src={logo.src}
+              alt={logo.alt}
+            />
+          </div>
+        ))
+      }
+    </div>
   </div>
 </section>
