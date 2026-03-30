@@ -1,4 +1,4 @@
-import type { PartnerLogo, Secciones } from "../interfaces";
+import type { Beneficios, PartnerLogo, Secciones } from "../interfaces";
 
 export const secciones: Secciones[] = [
   {
@@ -73,5 +73,39 @@ export const partnersLogos: PartnerLogo[] = [
     id: 8,
     src: "/partners/marcas_logo8.png",
     alt: "Partner 8",
+  },
+];
+
+export const beneficios: Beneficios[] = [
+  {
+    id: 2,
+    icon: "/icon/IconoEvitaPerdidasEnergeticas.png",
+    title: "Evita pérdidas energéticas",
+    description:
+      "Reduce hasta en un 30% la pérdida de generación energética, garantizando el máximo rendimiento los 365 días del año.",
+  },
+
+  {
+    id: 3,
+    icon: "/icon/IconoReducelaDemandadeAgua.png",
+    title: "Reduce la demanda de agua",
+    description:
+      "Disminuye el consumo de agua hasta en un 45% frente a métodos manuales gracias a su sistema de microaspersión avanzada.",
+  },
+
+  {
+    id: 4,
+    icon: "/icon/IconoReduceCostosOperativos.png",
+    title: "Reduce costos operativos",
+    description:
+      "Minimiza costos logísticos y operativos mediante automatización, filtración y programación remota de los ciclos de limpieza.",
+  },
+
+  {
+    id: 5,
+    icon: "/icon/IconoEsEcoEficiente.png",
+    title: "Es eco-eficiente",
+    description:
+      "Opera sin químicos ni fuentes de energía contaminantes, contribuyendo activamente al cumplimiento de los Objetivos de Desarrollo Sostenible.",
   },
 ];

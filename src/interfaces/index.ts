@@ -9,3 +9,10 @@ export interface PartnerLogo {
   src: string;
   alt: string;
 }
+
+export interface Beneficios {
+  id: number;
+  icon: string;
+  title: string;
+  description: string;
+}

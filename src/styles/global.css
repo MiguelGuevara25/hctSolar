@@ -37,3 +37,21 @@ body {
 .font-archivo {
   font-family: "Archivo Variable", sans-serif;
 }
+
+.marquee {
+  overflow: hidden;
+}
+
+.marquee__content {
+  display: flex;
+  animation: scrolling 35s linear infinite;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

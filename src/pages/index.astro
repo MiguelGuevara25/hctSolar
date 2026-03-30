@@ -5,6 +5,8 @@ import Navbar from "../components/ui/Navbar.astro";
 import Footer from "../components/sections/Footer.astro";
 import FormContact from "../components/sections/FormContact.astro";
 import Partners from "../components/sections/Partners.astro";
+import Beneficios from "../components/sections/Beneficios.astro";
+import Marquee from "../components/ui/Marquee.astro";
 ---
 
 <Layout>
@@ -36,11 +38,10 @@ import Partners from "../components/sections/Partners.astro";
     <div class="h-screen border grid place-items-center">Acá el video</div>
   </section>
 
+  <Beneficios />
   <Partners />
 
-  <div class="bg-minimasuciedad-maximageneracion text-white py-1.5">
-    Mínima Suciedad | Máxima Generación
-  </div>
+  <Marquee />
 
   <FormContact />
   <Footer />

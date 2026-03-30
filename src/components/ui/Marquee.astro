@@ -1,0 +1,16 @@
+---
+const texto = "Mínima Suciedad | Máxima Generación";
+const repeticiones = 20;
+---
+
+<div
+  class="bg-minimasuciedad-maximageneracion text-white py-1.5 overflow-hidden"
+>
+  <ul class="marquee__content [&>li]:shrink-0">
+    {
+      Array.from({ length: repeticiones }).map(() => (
+        <li>&nbsp;{texto} &nbsp;</li>
+      ))
+    }
+  </ul>
+</div>

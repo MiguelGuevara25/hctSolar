@@ -1,0 +1,46 @@
+---
+import { beneficios } from "../../data";
+---
+
+<section class="bg-white text-[#1C244B] py-12 md:py-20">
+  <div
+    class="w-90/100 mx-auto flex flex-col md:flex-row items-center justify-between gap-6 md:gap-0"
+  >
+    <div class="space-y-3 md:w-1/3">
+      <span class="uppercase">Beneficios</span>
+
+      <h2 class="font-archivo text-4xl font-light">
+        <span class="font-bold border-b-2 border-[#FF7C00]">
+          Ahorro sostenible
+        </span>
+        gracias a una eficiencia integral
+      </h2>
+
+      <p>
+        HCT genera un ahorro sostenible y tangible al optimizar la eficiencia,
+        reduciendo pérdidas energéticas, consumo de agua y costos operativos.
+      </p>
+    </div>
+
+    <div class="space-y-5 md:w-1/2">
+      {
+        beneficios.map(({ id, icon, title, description }) => (
+          <div class={`sticky sm:top-${id * 2} w-full`}>
+            <div class="bg-[#EDEDED] shadow p-4 rounded-2xl border-[#CACACA] border">
+              <div class="flex gap-3 md:gap-5">
+                <div class="md:w-16">
+                  <img src={icon} alt={title} />
+                </div>
+
+                <div class="space-y-1.5 md:space-y-3">
+                  <h3 class="font-medium text-lg md:text-2xl">{title}</h3>
+                  <p class="text-xs md:text-sm font-light">{description}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
