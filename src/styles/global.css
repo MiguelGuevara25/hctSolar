@@ -24,6 +24,12 @@
   background-position: center;
 }
 
+.bg-innovacion {
+  background-image: url("/background/FondoInnovacionencadaDetalle.webp");
+  background-size: cover;
+  background-position: center;
+}
+
 .bg-escalabilidad {
   background-image: url("/background/FondoEscalabilidad.webp");
   background-size: cover;
@@ -59,5 +65,18 @@ body {
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

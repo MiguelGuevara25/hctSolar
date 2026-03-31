@@ -1,0 +1,114 @@
+<section class="bg-innovacion text-white py-10 md:py-20">
+  <div class="w-90/100 md:w-3/5 mx-auto space-y-1">
+    <p class="text-center md:text-end text-sm uppercase">
+      Innovación en cada detalle
+    </p>
+    <div
+      class="flex flex-col md:flex-row border-2 rounded-xl md:rounded-tr-none"
+    >
+      <aside
+        class="md:w-1/3 flex flex-col [&>button]:grow [&>button]:p-4 [&>button]:cursor-pointer [&>button]:text-left [&>button]:hover:bg-[#FF7C00] [&>button]:font-medium"
+      >
+        <button
+          class="btn border-b-2 hover:rounded-t-lg md:hover:rounded-tl-lg md:hover:rounded-tr-none transition-all duration-300"
+          >Componentes</button
+        >
+        <button class="btn border-b-2 transition-all duration-300"
+          >Operación</button
+        >
+        <button class="btn border-b-2 transition-all duration-300"
+          >Rociado</button
+        >
+        <button
+          class="btn bg-white text-[#1C244B] md:rounded-bl-lg md:hover:rounded-bl-lg md:border-b-0 border-b-2 border-white transition-all duration-300"
+          >Eficiencia Hídrica</button
+        >
+      </aside>
+
+      <div
+        id="content-benficios"
+        class="md:border-l-2 p-10 flex flex-col justify-center gap-4 w-full"
+      >
+        <h3 class="text-3xl font-semibold">Eficiencia Hídrica</h3>
+        <p>
+          Gracias a su menor consumo de agua por ciclo, la tecnología HCT supera
+          la eficiencia hasta un 45% a los métodos manuales
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const btnBeneficios = document.querySelectorAll(".btn");
+  const contentBeneficios = document.querySelector("#content-benficios");
+
+  btnBeneficios.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      console.log(btn);
+
+      btnBeneficios.forEach((b) => {
+        b.classList.remove("bg-white", "text-[#1C244B]");
+      });
+
+      if (index === 0) {
+        btn.classList.add(
+          "bg-white",
+          "text-[#1C244B]",
+          "border-white",
+          "hover:text-white",
+          "md:rounded-tl-lg",
+          "md:rounded-tr-none",
+          "rounded-t-lg",
+        );
+      } else if (index === btnBeneficios.length - 1) {
+        btn.classList.add(
+          "bg-white",
+          "text-[#1C244B]",
+          "border-white",
+          "hover:text-white",
+          "md:rounded-bl-lg",
+        );
+      } else {
+        btn.classList.add(
+          "bg-white",
+          "text-[#1C244B]",
+          "border-white",
+          "hover:text-white",
+        );
+      }
+
+      if (contentBeneficios) {
+        if (index === 0) {
+          contentBeneficios.innerHTML = `
+          <h3 class="text-3xl font-semibold">Componentes eficientes y durables</h3>
+          <p>
+            HCT integra equipos y materiales provenientes de fabricantes globales líderes especializados, asegurando una eficiencia permanente y una vida útil prolongada en cualquier entorno
+          </p>
+        `;
+        } else if (index === 1) {
+          contentBeneficios.innerHTML = `
+          <h3 class="text-3xl font-semibold">Operación Inteligente</h3>
+          <p>
+            La tecnología 100% automatizada de HCT elimina la intervención manual, permite ciclos de limpieza nocturna programados y protege las celdas solares de cualquier daño ajeno.
+          </p>
+        `;
+        } else if (index === 2) {
+          contentBeneficios.innerHTML = `
+          <h3 class="text-3xl font-semibold">Rociado Uniforme</h3>
+          <p>
+            HCT emplea rociadores de última generación, estratégicamente distribuidos para garantizar un rociado uniforme y una cobertura precisa de cada centímetro del módulo solar.
+          </p>
+        `;
+        } else if (index === 3) {
+          contentBeneficios.innerHTML = `
+          <h3 class="text-3xl font-semibold">Eficiencia Hídrica</h3>
+          <p>
+            Gracias a su menor consumo de agua por ciclo, la tecnología HCT supera la eficiencia hasta un 45% a los métodos manuales
+          </p>
+        `;
+        }
+      }
+    });
+  });
+</script>
