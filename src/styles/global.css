@@ -30,6 +30,12 @@
   background-position: center;
 }
 
+.bg-impacto {
+  background-image: url("/background/FondoImpactoOperativoAmbientalComprobado.webp");
+  background-size: cover;
+  background-position: center;
+}
+
 .bg-escalabilidad {
   background-image: url("/background/FondoEscalabilidad.webp");
   background-size: cover;

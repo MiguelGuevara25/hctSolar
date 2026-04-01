@@ -16,3 +16,10 @@ export interface Beneficios {
   title: string;
   description: string;
 }
+
+export interface Impactos {
+  id: number;
+  title: string;
+  description: string;
+  value: number | string;
+}

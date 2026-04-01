@@ -1,0 +1,67 @@
+---
+import { impactos } from "../../data";
+---
+
+<div
+  class="md:w-1/2 mx-auto bg-impacto text-white rounded-4xl p-8 md:p-10 space-y-5 md:space-y-10 relative"
+>
+  <h2 class="font-archivo text-3xl md:text-4xl font-light text-center">
+    Impacto
+    <span class="font-bold border-b-2 border-[#FF7C00]">
+      operativo y ambiental
+    </span>
+    comprobado
+  </h2>
+
+  <div
+    class="flex flex-col md:flex-row md:w-4/5 mx-auto items-center md:gap-20"
+  >
+    <div
+      class="basis-1/2 [&>div]:border-b [&>div]:last:border-none list-impacto"
+    >
+      {
+        impactos.map(({ id, title, description }) => (
+          <div class="item-impacto">
+            <div class="head-impacto py-4 flex justify-between items-center cursor-pointer">
+              <h3 class="text-xl">{title}</h3>
+            </div>
+
+            <div class="content-impacto max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+              <p class="pb-4 text-xs">{description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="basis-1/2 border">
+      <div class="rounded-full"></div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .item-impacto.active .content-impacto {
+    max-height: 200px;
+    transition: ease-in-out;
+    transition-duration: 300ms;
+  }
+</style>
+
+<script>
+  const items = document.querySelectorAll(".item-impacto");
+
+  items.forEach((item) => {
+    const header = item.querySelector(".head-impacto");
+
+    header?.addEventListener("click", () => {
+      const currentlyActive = document.querySelector(".item-impacto.active");
+      if (currentlyActive && currentlyActive !== item) {
+        currentlyActive.classList.remove("active");
+      }
+
+      // Alternar el estado actual
+      item.classList.toggle("active");
+    });
+  });
+</script>

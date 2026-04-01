@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import IconArrows from "../assets/IconArrows.astro";
 import Navbar from "../components/ui/Navbar.astro";
 import Footer from "../components/sections/Footer.astro";
 import FormContact from "../components/sections/FormContact.astro";
@@ -9,45 +8,21 @@ import Beneficios from "../components/sections/Beneficios.astro";
 import Escalabilidad from "../components/sections/Escalabilidad.astro";
 import Marquee from "../components/ui/Marquee.astro";
 import Innovacion from "../components/sections/Innovacion.astro";
+import Funcionamiento from "../components/sections/Funcionamiento.astro";
+import Aplicaciones from "../components/sections/Aplicaciones.astro";
+import Hero from "../components/sections/Hero.astro";
 ---
 
 <Layout>
   <Navbar />
-  <section class="w-90/100 mx-auto text-[#1C244B] mt-10">
-    <div
-      class="flex md:flex-row flex-col items-center justify-between mb-10 md:gap-0 gap-7"
-    >
-      <h1
-        class="font-archivo text-4xl md:text-6xl font-light w-full md:w-45/100 text-center md:text-left"
-      >
-        <span class="font-bold">Tecnología automatizada</span> de limpieza solar fotovoltaica
-      </h1>
-
-      <div class="bg-white p-6 relative md:w-1/3 pr-16 space-y-2">
-        <p class="font-semibold">
-          La nueva generación en mantenimiento de plantas solares
-        </p>
-        <p>
-          Una solución eficiente, sostenible y confiable diseñada para maximizar
-          la producción energética, reducir costos operativos y proteger el
-          valor del activo.
-        </p>
-
-        <IconArrows />
-      </div>
-    </div>
-
-    <div class="h-screen border grid place-items-center">Acá el video</div>
-  </section>
-
+  <Hero />
+  <Aplicaciones />
   <Innovacion />
-
   <Beneficios />
+  <Funcionamiento />
   <Escalabilidad />
   <Partners />
-
   <Marquee />
-
   <FormContact />
   <Footer />
 </Layout>

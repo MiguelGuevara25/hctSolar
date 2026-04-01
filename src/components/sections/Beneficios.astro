@@ -25,7 +25,7 @@ import { beneficios } from "../../data";
     <div class="space-y-5 md:w-1/2">
       {
         beneficios.map(({ id, icon, title, description }) => (
-          <div class={`sticky sm:top-${id * 2} w-full`}>
+          <div class={`sticky w-full`} style={{ top: `${id * 8}px` }}>
             <div class="bg-[#EDEDED] shadow p-4 rounded-2xl border-[#CACACA] border">
               <div class="flex gap-3 md:gap-5">
                 <div class="md:w-16">

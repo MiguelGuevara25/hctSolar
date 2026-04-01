@@ -1,4 +1,4 @@
-<section class="bg-innovacion text-white py-10 md:py-20">
+<section class="bg-innovacion text-white -mt-40 pt-50 md:pt-60 pb-10 md:pb-20">
   <div class="w-90/100 md:w-3/5 mx-auto space-y-1">
     <p class="text-center md:text-end text-sm uppercase">
       Innovación en cada detalle
@@ -45,8 +45,6 @@
 
   btnBeneficios.forEach((btn, index) => {
     btn.addEventListener("click", () => {
-      console.log(btn);
-
       btnBeneficios.forEach((b) => {
         b.classList.remove("bg-white", "text-[#1C244B]");
       });

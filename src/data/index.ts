@@ -1,4 +1,9 @@
-import type { Beneficios, PartnerLogo, Secciones } from "../interfaces";
+import type {
+  Beneficios,
+  Impactos,
+  PartnerLogo,
+  Secciones,
+} from "../interfaces";
 
 export const secciones: Secciones[] = [
   {
@@ -107,5 +112,49 @@ export const beneficios: Beneficios[] = [
     title: "Es eco-eficiente",
     description:
       "Opera sin químicos ni fuentes de energía contaminantes, contribuyendo activamente al cumplimiento de los Objetivos de Desarrollo Sostenible.",
+  },
+];
+
+export const impactos: Impactos[] = [
+  {
+    id: 1,
+    title: "Consumo de Agua",
+    description: "Ahorro de agua con HCT vs. Limpieza manual",
+    value: 47.2,
+  },
+
+  {
+    id: 2,
+    title: "Agua Desmineralizada",
+    description: "Ahorro HCT vs. sistemas que dependen de agua desmineralizada",
+    value: 96.4,
+  },
+
+  {
+    id: 3,
+    title: "Mano de Obra",
+    description: "Eliminación de costos de personal en campo con HCT",
+    value: 100,
+  },
+
+  {
+    id: 4,
+    title: "Impacto Ambiental",
+    description: "Operación libre de emisiones directas de CO₂ con HCT",
+    value: 100,
+  },
+
+  {
+    id: 5,
+    title: "Mantenimiento Técnico",
+    description: "La tecnología HCT requiere de un mantenimiento reducido",
+    value: "Mínimo",
+  },
+
+  {
+    id: 6,
+    title: "OPEX Anual Total",
+    description: "Ahorro general en costos operativos con HCT",
+    value: 93.1,
   },
 ];
