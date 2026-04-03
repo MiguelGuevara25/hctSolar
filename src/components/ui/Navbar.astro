@@ -6,8 +6,7 @@ import { Image } from "astro:assets";
 import LogoHCT from "../../../public/img/logoHCT.png";
 ---
 
-<header class="bg-white">
-  <!-- <header class="sticky top-0 bg-white z-50"> -->
+<header class="bg-white sticky top-0 z-50 shadow-xl" id="navbar">
   <div class="w-90/100 mx-auto flex items-center justify-between py-4">
     <div class="w-52">
       <Image src={LogoHCT} alt="HCT logo" format="png" quality="high" />
@@ -37,3 +36,22 @@ import LogoHCT from "../../../public/img/logoHCT.png";
     </div>
   </div>
 </header>
+
+<script>
+  const navbar = document.querySelector("#navbar");
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY) {
+      navbar?.classList.remove("sticky");
+      navbar?.classList.remove("animate-fade-in");
+    } else {
+      navbar?.classList.add("sticky");
+      navbar?.classList.add("animate-fade-in");
+    }
+
+    lastScrollY = currentScrollY;
+  });
+</script>

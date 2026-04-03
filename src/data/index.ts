@@ -83,7 +83,7 @@ export const partnersLogos: PartnerLogo[] = [
 
 export const beneficios: Beneficios[] = [
   {
-    id: 2,
+    id: 5,
     icon: "/icon/IconoEvitaPerdidasEnergeticas.png",
     title: "Evita pérdidas energéticas",
     description:
@@ -91,7 +91,7 @@ export const beneficios: Beneficios[] = [
   },
 
   {
-    id: 3,
+    id: 6,
     icon: "/icon/IconoReducelaDemandadeAgua.png",
     title: "Reduce la demanda de agua",
     description:
@@ -99,7 +99,7 @@ export const beneficios: Beneficios[] = [
   },
 
   {
-    id: 4,
+    id: 7,
     icon: "/icon/IconoReduceCostosOperativos.png",
     title: "Reduce costos operativos",
     description:
@@ -107,7 +107,7 @@ export const beneficios: Beneficios[] = [
   },
 
   {
-    id: 5,
+    id: 8,
     icon: "/icon/IconoEsEcoEficiente.png",
     title: "Es eco-eficiente",
     description:
@@ -141,14 +141,14 @@ export const impactos: Impactos[] = [
     id: 4,
     title: "Impacto Ambiental",
     description: "Operación libre de emisiones directas de CO₂ con HCT",
-    value: 100,
+    value: 80.5,
   },
 
   {
     id: 5,
     title: "Mantenimiento Técnico",
     description: "La tecnología HCT requiere de un mantenimiento reducido",
-    value: "Mínimo",
+    value: 40,
   },
 
   {
@@ -156,5 +156,28 @@ export const impactos: Impactos[] = [
     title: "OPEX Anual Total",
     description: "Ahorro general en costos operativos con HCT",
     value: 93.1,
+  },
+];
+
+export const aplicaciones = [
+  {
+    id: 1,
+    img: "/img/aplicaciones/F-1.avif",
+    title: "Plantas solares sobre suelo con y sin tracking",
+  },
+  {
+    id: 2,
+    img: "/img/aplicaciones/F-2.webp",
+    title: "Plantas solares sobre techos industriales",
+  },
+  {
+    id: 3,
+    img: "/img/aplicaciones/F-3.webp",
+    title: "Plantas solares flotantes",
+  },
+  {
+    id: 4,
+    img: "/img/aplicaciones/F-4.webp",
+    title: "Proyectos de hotelería y edificaciones",
   },
 ];

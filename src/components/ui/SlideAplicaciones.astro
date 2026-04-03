@@ -1,0 +1,46 @@
+---
+import { aplicaciones } from "../../data";
+---
+
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    {
+      aplicaciones.map((app) => (
+        <div class="swiper-slide">
+          <img
+            class="border-4 border-[#FF7C00] rounded-xl"
+            src={app.img}
+            alt={app.title}
+          />
+        </div>
+      ))
+    }
+  </div>
+
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+
+<style>
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+<script type="module">
+  import Swiper from "https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.mjs";
+
+  let swiper = new Swiper(".mySwiper", {
+    slidesPerView: 2,
+    spaceBetween: 60,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
