@@ -16,26 +16,33 @@ import { impactos } from "../../data";
   <div
     class="flex flex-col md:flex-row md:w-4/5 mx-auto items-center md:gap-20"
   >
-    <div
-      class="basis-1/2 [&>div]:border-b [&>div]:last:border-none list-impacto"
-    >
+    <div class="[&>div]:border-b w-full [&>div]:last:border-none list-impacto">
       {
         impactos.map(({ id, title, description }) => (
           <div class="item-impacto">
             <div class="head-impacto py-4 flex justify-between items-center cursor-pointer">
               <h3 class="text-xl">{title}</h3>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 1024 1024"
+                class="transition-transform duration-300"
+              >
+                <path
+                  fill="currentColor"
+                  d="M104.7 338.8a64 64 0 0 1 90.5 0L512 655.6l316.8-316.8a64 64 0 0 1 90.5 90.4l-362 362.1a64 64 0 0 1-90.5 0l-362.1-362a64 64 0 0 1 0-90.5"
+                />
+              </svg>
             </div>
 
             <div class="content-impacto max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-              <p class="pb-4 text-xs">{description}</p>
+              <p class="pb-4 text-sm">{description}</p>
             </div>
           </div>
         ))
       }
-    </div>
-
-    <div class="basis-1/2 border">
-      <div class="rounded-full"></div>
     </div>
   </div>
 </div>
@@ -45,6 +52,10 @@ import { impactos } from "../../data";
     max-height: 200px;
     transition: ease-in-out;
     transition-duration: 300ms;
+  }
+
+  .item-impacto.active svg {
+    transform: rotate(180deg);
   }
 </style>
 
