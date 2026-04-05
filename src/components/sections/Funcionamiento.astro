@@ -1,5 +1,9 @@
+---
+import { funcionamiento } from "../../data";
+---
+
 <section class="w-90/100 mx-auto text-[#1C244B] py-10 md:py-20">
-  <div class="space-y-3 text-center">
+  <div class="space-y-3 text-center mb-10">
     <span class="uppercase">Funcionamiento</span>
 
     <h2 class="font-archivo text-4xl font-light">
@@ -9,4 +13,57 @@
       de Filtración y Limpieza Automatizada
     </h2>
   </div>
+
+  <div class="text-white flex flex-col md:flex-row gap-10">
+    {
+      funcionamiento.map(({ images, title, text1, text2 }) => (
+        <div class="bg-card-funcionamiento p-10 rounded-4xl w-full md:w-1/2">
+          <div class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+              {images.map((img) => (
+                <div class="swiper-slide">
+                  <img src={img} alt={title} />
+                </div>
+              ))}
+            </div>
+
+            <div class="h-1 md:h-10 relative left-75/100! md:left-4/5! -top-4 md:-top-15 flex w-30/100 md:w-1/5">
+              <div class="swiper-button-prev md:border-4 md:border-white md:rounded-full p-4 md:p-2 [&>svg]:text-white md:size-15!" />
+              <div class="swiper-button-next md:border-4 md:border-white md:rounded-full p-4 md:p-2 [&>svg]:text-white md:size-15!" />
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <h3 class="text-3xl font-bold">{title}</h3>
+            <p>{text1}</p>
+            <p>{text2}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
 </section>
+
+<style>
+  .swiper {
+    width: 100%;
+  }
+</style>
+
+<script type="module">
+  import Swiper from "https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.mjs";
+
+  let swiper = new Swiper(".mySwiper2", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 4000,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+      disabledClass: "swiper-button-disabled",
+    },
+  });
+</script>

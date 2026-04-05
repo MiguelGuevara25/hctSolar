@@ -23,3 +23,17 @@ export interface Impactos {
   description: string;
   value: number | string;
 }
+
+export interface Aplicaciones {
+  id: number;
+  img: string;
+  title: string;
+}
+
+export interface Funcionamiento {
+  id: number;
+  images: string[];
+  title: string;
+  text1: string;
+  text2: string;
+}

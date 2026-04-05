@@ -1,5 +1,7 @@
 import type {
+  Aplicaciones,
   Beneficios,
+  Funcionamiento,
   Impactos,
   PartnerLogo,
   Secciones,
@@ -159,7 +161,7 @@ export const impactos: Impactos[] = [
   },
 ];
 
-export const aplicaciones = [
+export const aplicaciones: Aplicaciones[] = [
   {
     id: 1,
     img: "/img/aplicaciones/F-1.avif",
@@ -179,5 +181,35 @@ export const aplicaciones = [
     id: 4,
     img: "/img/aplicaciones/F-4.webp",
     title: "Proyectos de hotelería y edificaciones",
+  },
+];
+
+export const funcionamiento: Funcionamiento[] = [
+  {
+    id: 1,
+    images: [
+      "/img/funcionamiento/Bloque1_Imagen1.webp",
+      "/img/funcionamiento/Bloque1_Imagen2.webp",
+      "/img/funcionamiento/Bloque1_Imagen3.webp",
+    ],
+    title: "Desmeralización y Sistema de Filtración de agua incorporado",
+    text1:
+      "Filtración mecánica por anillos que retiene sólidos suspendidos y sedimentos, asegurando la pureza eficiente del agua a utilizar.",
+    text2:
+      "Tratamiento magnético que previene depósitos minerales en los módulos solares, garantizando eficiencia y prolongando la vida útil de la instalación.",
+  },
+
+  {
+    id: 2,
+    images: [
+      "/img/funcionamiento/Bloque2_Imagen1.webp",
+      "/img/funcionamiento/Bloque2_Imagen2.png",
+      "/img/funcionamiento/Bloque2_Imagen3.webp",
+    ],
+    title: "Control de Limpieza Automatizado y de alta precisión",
+    text1:
+      "Estaciones decodificadas con ciclos de limpieza programables desde su aplicación en línea.",
+    text2:
+      "Cobertura de limpieza integral mediante boquillas rociadoras de doble alcance y presión controlada.",
   },
 ];

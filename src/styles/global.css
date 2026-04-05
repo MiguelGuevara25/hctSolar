@@ -42,6 +42,12 @@
   background-position: center;
 }
 
+.bg-card-funcionamiento {
+  background-image: url("/background/FondoFuncionamiento.png");
+  background-size: cover;
+  background-position: center;
+}
+
 .bg-form {
   background-image: url("/background/BordeFondoFormularioContacto.png");
   background-size: cover;
