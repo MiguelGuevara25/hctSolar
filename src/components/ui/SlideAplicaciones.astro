@@ -7,18 +7,17 @@ import { aplicaciones } from "../../data";
     {
       aplicaciones.map((app) => (
         <div class="swiper-slide">
-          <img
-            class="border-4 border-[#FF7C00] rounded-xl"
-            src={app.img}
-            alt={app.title}
-          />
+          <div class="border-4 border-[#FF7C00] rounded-xl overflow-hidden relative md:h-96 h-60">
+            <img class="w-full h-full object-cover" src={app.img} alt={app.title} />
+
+            <p class="text-white text-center absolute bottom-0 w-full py-5 backdrop-blur-sm md:text-base text-sm">
+              {app.title}
+            </p>
+          </div>
         </div>
       ))
     }
   </div>
-
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
 </div>
 
 <style>
@@ -32,15 +31,17 @@ import { aplicaciones } from "../../data";
   import Swiper from "https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.mjs";
 
   let swiper = new Swiper(".mySwiper", {
-    slidesPerView: 2,
-    spaceBetween: 60,
+    slidesPerView: 1,
+    spaceBetween: 30,
     loop: true,
     autoplay: {
-      delay: 2500,
+      delay: 4000,
     },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 60,
+      },
     },
   });
 </script>
