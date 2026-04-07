@@ -102,6 +102,7 @@ import LogoHCT from "../../../public/img/logoHCT.png";
     menuMobile?.classList.toggle("fixed");
 
     overlay?.classList.toggle("hidden");
+    document.body.classList.toggle("no-scroll");
 
     if (!isOpen) {
       menuMobile?.classList.toggle("hidden");
@@ -121,6 +122,7 @@ import LogoHCT from "../../../public/img/logoHCT.png";
     setTimeout(() => {
       menuMobile?.classList.add("hidden");
       overlay?.classList.add("hidden");
+      document.body.classList.remove("no-scroll");
     }, 500);
   });
 
