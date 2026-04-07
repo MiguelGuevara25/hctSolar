@@ -31,14 +31,99 @@ import LogoHCT from "../../../public/img/logoHCT.png";
       <ArrowUpRight />
     </button>
 
-    <div class="lg:hidden">
+    <div id="menu" class="lg:hidden cursor-pointer">
       <MenuBurger />
+    </div>
+
+    <div id="overlay" class="hidden fixed inset-0 bg-black/40 z-40"></div>
+
+    <div
+      id="menu-mobile"
+      class="hidden h-screen w-4/5 absolute top-0 left-0 z-60 bg-white animate-fade-out"
+    >
+      <nav class="h-screen flex flex-col items-center justify-center gap-10">
+        <div class="w-3/5">
+          <Image src={LogoHCT} alt="HCT logo" format="png" quality="high" />
+        </div>
+
+        <ul class="flex flex-col gap-3 text-[#1C244B] font-medium">
+          {
+            secciones.map((seccion) => (
+              <li>
+                <a href={seccion.slug}>{seccion.nombre}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
     </div>
   </div>
 </header>
 
+<style>
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-in-out;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-fade-out {
+    animation: fade-out 0.5s ease-in-out;
+  }
+
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+</style>
+
 <script>
   const navbar = document.querySelector("#navbar");
+  const menu = document.querySelector("#menu");
+  const menuMobile = document.querySelector("#menu-mobile");
+  const overlay = document.querySelector("#overlay");
+
+  menu?.addEventListener("click", () => {
+    const isOpen = !menuMobile?.classList.contains("hidden");
+
+    menuMobile?.classList.toggle("animate-fade-in", !isOpen);
+    menuMobile?.classList.toggle("animate-fade-out", isOpen);
+    menuMobile?.classList.toggle("fixed");
+
+    overlay?.classList.toggle("hidden");
+
+    if (!isOpen) {
+      menuMobile?.classList.toggle("hidden");
+    }
+  });
+
+  menuMobile?.addEventListener("animationend", () => {
+    if (menuMobile.classList.contains("animate-fade-out")) {
+      menuMobile.classList.toggle("hidden");
+    }
+  });
+
+  overlay?.addEventListener("click", () => {
+    menuMobile?.classList.remove("animate-fade-in");
+    menuMobile?.classList.add("animate-fade-out");
+
+    setTimeout(() => {
+      menuMobile?.classList.add("hidden");
+      overlay?.classList.add("hidden");
+    }, 500);
+  });
+
   let lastScrollY = window.scrollY;
 
   window.addEventListener("scroll", () => {
