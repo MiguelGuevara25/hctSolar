@@ -15,28 +15,28 @@ export const secciones: Secciones[] = [
   },
   {
     id: 2,
+    nombre: "Impacto",
+    slug: "#impacto",
+  },
+  {
+    id: 3,
     nombre: "Aplicaciones",
     slug: "#aplicaciones",
   },
   {
-    id: 3,
+    id: 4,
     nombre: "Beneficios",
     slug: "#beneficios",
   },
   {
-    id: 4,
+    id: 5,
     nombre: "Funcionamiento",
     slug: "#funcionamiento",
   },
   {
-    id: 5,
+    id: 6,
     nombre: "Escalabilidad",
     slug: "#escalabilidad",
-  },
-  {
-    id: 6,
-    nombre: "Impacto",
-    slug: "#impacto",
   },
 ];
 
@@ -190,7 +190,7 @@ export const funcionamiento: Funcionamiento[] = [
     images: [
       "/img/funcionamiento/Bloque1_Imagen1.webp",
       "/img/funcionamiento/Bloque1_Imagen2.webp",
-      "/img/funcionamiento/Bloque1_Imagen3.webp",
+      // "/img/funcionamiento/Bloque1_Imagen3.webp",
     ],
     title: "Desmeralización y Sistema de Filtración de agua incorporado",
     text1:
@@ -202,8 +202,8 @@ export const funcionamiento: Funcionamiento[] = [
   {
     id: 2,
     images: [
-      "/img/funcionamiento/Bloque2_Imagen1.webp",
-      "/img/funcionamiento/Bloque2_Imagen2.png",
+      // "/img/funcionamiento/Bloque2_Imagen1.webp",
+      "/img/funcionamiento/Bloque2_Imagen2.webp",
       "/img/funcionamiento/Bloque2_Imagen3.webp",
     ],
     title: "Control de Limpieza Automatizado y de alta precisión",

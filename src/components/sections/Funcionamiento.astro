@@ -2,7 +2,10 @@
 import { funcionamiento } from "../../data";
 ---
 
-<section class="w-90/100 mx-auto text-[#1C244B] pt-10 md:pt-20 -mb-60">
+<section
+  id="funcionamiento"
+  class="w-90/100 mx-auto text-[#1C244B] pt-10 md:pt-20 -mb-60"
+>
   <div class="space-y-3 text-center mb-10">
     <span class="uppercase">Funcionamiento</span>
 
@@ -22,14 +25,11 @@ import { funcionamiento } from "../../data";
             <div class="swiper-wrapper">
               {images.map((img) => (
                 <div class="swiper-slide">
-                  <img src={img} alt={title} />
+                  <div class="w-full md:h-100 h-80 mb-5">
+                    <img class="w-full h-full object-cover rounded-4xl" src={img} loading="lazy" alt={title} />
+                  </div>
                 </div>
               ))}
-            </div>
-
-            <div class="h-1 md:h-10 relative left-75/100! md:left-4/5! -top-4 md:-top-15 flex w-30/100 md:w-1/5">
-              <div class="swiper-button-prev md:border-4 md:border-white md:rounded-full p-3.5 md:p-2 [&>svg]:text-white md:size-15!" />
-              <div class="swiper-button-next md:border-4 md:border-white md:rounded-full p-3.5 md:p-2 [&>svg]:text-white md:size-15!" />
             </div>
           </div>
 
@@ -59,11 +59,6 @@ import { funcionamiento } from "../../data";
     loop: true,
     autoplay: {
       delay: 4000,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-      disabledClass: "swiper-button-disabled",
     },
   });
 </script>

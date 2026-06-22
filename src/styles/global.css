@@ -6,6 +6,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .bg-btn-header {
   background-image: url("/background/FondoBotonContactanosHeader.png");
   background-size: cover;

@@ -9,7 +9,15 @@ import LogoHCT from "../../../public/img/logoHCT.png";
 <header class="bg-white sticky top-0 z-50 shadow-xl" id="navbar">
   <div class="w-90/100 mx-auto flex items-center justify-between py-4">
     <div class="w-52">
-      <Image src={LogoHCT} alt="HCT logo" format="png" quality="high" />
+      <a href="/">
+        <Image
+          src={LogoHCT}
+          loading="eager"
+          alt="HCT logo"
+          format="png"
+          quality="high"
+        />
+      </a>
     </div>
 
     <nav class="hidden lg:block">
@@ -24,12 +32,14 @@ import LogoHCT from "../../../public/img/logoHCT.png";
       </ul>
     </nav>
 
-    <button
-      class="bg-btn-header text-white px-4 py-2.5 rounded-full lg:flex items-center gap-10 hidden"
-    >
-      <span>Contáctanos</span>
-      <ArrowUpRight />
-    </button>
+    <a class="cursor-pointer" href="#contacto">
+      <button
+        class="bg-btn-header text-white px-4 py-2.5 rounded-full lg:flex items-center gap-10 cursor-pointer hidden"
+      >
+        <span>Contáctanos</span>
+        <ArrowUpRight />
+      </button>
+    </a>
 
     <div id="menu" class="lg:hidden cursor-pointer">
       <MenuBurger />
@@ -43,7 +53,15 @@ import LogoHCT from "../../../public/img/logoHCT.png";
     >
       <nav class="h-screen flex flex-col items-center justify-center gap-10">
         <div class="w-3/5">
-          <Image src={LogoHCT} alt="HCT logo" format="png" quality="high" />
+          <a href="/">
+            <Image
+              src={LogoHCT}
+              loading="eager"
+              alt="HCT logo"
+              format="png"
+              quality="high"
+            />
+          </a>
         </div>
 
         <ul class="flex flex-col gap-3 text-[#1C244B] font-medium">
